@@ -1,21 +1,19 @@
 package dev.ricr.year_2023;
 
-import dev.ricr.utils.ReadFile;
+import dev.ricr.utils.Day;
 
 import java.util.ArrayList;
 
-public class Day1 {
-  private final String directory;
+public class Day1 extends Day {
 
   public Day1() {
     this.directory = "puzzles/2023/day1/";
   }
 
   public int part1(String fileName) {
-    ArrayList<String> lines = ReadFile.getLines(this.directory + fileName);
     ArrayList<String> values = new ArrayList<>();
 
-    for (String line : lines) {
+    for (String line : this.getLines(fileName)) {
       int front = 0;
       int back = line.length() - 1;
       int[] ints = {-1, -1};
@@ -64,10 +62,9 @@ public class Day1 {
   }
 
   public int part2(String fileName) {
-    ArrayList<String> lines = ReadFile.getLines(this.directory + fileName);
     ArrayList<String> values = new ArrayList<>();
 
-    for (String line : lines) {
+    for (String line : this.getLines(fileName)) {
       ArrayList<String> tempLine = new ArrayList<>();
 
       for (int i = 0; i < line.length(); i++) {
