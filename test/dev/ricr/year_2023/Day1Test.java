@@ -1,7 +1,8 @@
 package dev.ricr.year_2023;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class Day1Test {
 
